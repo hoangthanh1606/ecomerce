@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import './styles.css'
+import Image from '../Image/Image'
+
 
 import moment from 'moment';
 
@@ -508,19 +510,21 @@ function ProductDetailPage({
       >
         <Left>
           <Main>
-            <img src={bigImage[stt]} alt="" />
+            {/* <img src={bigImage[stt]} alt="" /> */}
+            <Image src={bigImage[stt]} alt=""/>
           </Main>
           <Thumbnails>
             {bigImage.map((item, index) => {
               return (
                 <Thumbnail key={index}>
-                  <img
+                  {/* <img
                     src={item}
                     alt=""
                     onClick={() => {
                       handletab(index);
                     }}
-                  />
+                  /> */}
+                  <Image src={item} alt="" onClick={() => {handletab(index)}}/>
                 </Thumbnail>
               );
             })}
@@ -676,7 +680,6 @@ const mapStateToProps = (state) => {
   const { productDetail, productSame } = state.productReducer;
   const { cartList } = state.cartReducer;
   const { reviewList } = state.reviewReducer;
-  console.log("🚀 ~ file: index.jsx ~ line 572 ~ mapStateToProps ~ reviewList", reviewList)
   return {
     productDetail,
     productSame,

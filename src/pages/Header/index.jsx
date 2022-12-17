@@ -10,7 +10,7 @@ import {
 } from "@ant-design/icons";
 import "./styles.css";
 
-import { Input, Avatar, Menu, Dropdown, Button } from "antd";
+import { Input, Avatar, Menu, Dropdown } from "antd";
 
 import history from "../../utils/history";
 import { addSearchProductAction } from "../../redux/actions";

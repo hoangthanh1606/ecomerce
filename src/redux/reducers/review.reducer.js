@@ -24,7 +24,6 @@ export default function reviewReducer(state = initialState, action) {
     }
     case 'GET_REVIEW_LIST_SUCCESS': {
       const { data } = action.payload;
-      console.log("🚀 ~ file: review.reducer.js ~ line 22 ~ reviewReducer ~ data", data)
       return {
         ...state,
         reviewList: {

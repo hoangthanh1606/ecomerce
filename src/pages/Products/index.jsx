@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 // import './styles.css'
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import Image from '../Image/Image'
 
 import history from "../../utils/history";
 import { Select, Rate, message, notification, Button } from "antd";
@@ -425,7 +426,8 @@ function ProductPage({
         <ProductItem key={productIndex}>
           <ImgContainer>
             <Link to={`/product/${productItem.id}`}>
-              <img src={productItem.image[0]} alt={productItem.name} />
+              {/* <img src={productItem.image[0]} alt={productItem.name} /> */}
+              <Image src={productItem.image[0]} alt={productItem.name} />
             </Link>
             {productItem.countInStock === 0 ? (
               <IconWrapper className="disabled">

@@ -286,7 +286,7 @@ function Home({ getProductList, productList, addCart, getAllReviewList, allRevie
       let totalRate = 0;
       let count = 0;
       allReviewList.data.forEach((item) => {
-        if (productItem.id == item.productId) {
+        if (productItem.id === item.productId) {
           totalRate = totalRate + item.rate;
           count += 1;
         }
